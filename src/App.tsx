@@ -14,6 +14,8 @@ import {
   PhotoModal,
 } from './components';
 
+import sushmaImage from './assets/sushma.jpg';
+
 const App: React.FC = () => {
   const [hasConsented, setHasConsented] = useState(false);
   const [selection, setSelection] = useState<'none' | 'talk' | 'time'>('none');
