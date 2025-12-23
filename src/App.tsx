@@ -464,7 +464,7 @@ const App: React.FC = () => {
       <PhotoModal
         isOpen={showPhotoModal}
         onClose={() => setShowPhotoModal(false)}
-        imageSrc="/src/assets/sushma.jpg"
+        imageSrc={sushmaImage}
         caption="Little chuchuma 🐷💕"
       />
     </div>
