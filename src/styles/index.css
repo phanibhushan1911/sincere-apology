@@ -1,0 +1,241 @@
+/* Custom Animations & Styles */
+
+/* Smooth scroll for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Typewriter cursor animation */
+@keyframes blink {
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.typewriter-cursor {
+  animation: blink 1s infinite;
+}
+
+/* Floating animation for hearts */
+@keyframes float-up {
+  0% {
+    transform: translateY(100vh) rotate(0deg) scale(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.6;
+    transform: translateY(90vh) rotate(20deg) scale(1);
+  }
+
+  90% {
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: translateY(-10vh) rotate(360deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.floating-heart {
+  animation: float-up var(--duration, 15s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+/* Falling flower animation */
+@keyframes fall-down {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(50vh) translateX(var(--sway, 30px)) rotate(180deg);
+  }
+
+  95% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(110vh) translateX(calc(var(--sway, 30px) * -1)) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.falling-flower {
+  animation: fall-down linear infinite;
+}
+
+/* Gentle pulse animation */
+@keyframes gentle-pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(244, 114, 182, 0.4);
+  }
+
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px 5px rgba(244, 114, 182, 0.2);
+  }
+}
+
+.pulse-gentle {
+  animation: gentle-pulse 3s ease-in-out infinite;
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* Gradient orb animation */
+@keyframes orb-float {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5;
+  }
+
+  25% {
+    transform: translate(10px, -20px) scale(1.1);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: translate(-5px, -10px) scale(0.95);
+    opacity: 0.4;
+  }
+
+  75% {
+    transform: translate(-15px, 5px) scale(1.05);
+    opacity: 0.55;
+  }
+}
+
+.orb {
+  animation: orb-float 20s ease-in-out infinite;
+}
+
+.orb-1 {
+  animation-delay: 0s;
+}
+
+.orb-2 {
+  animation-delay: -5s;
+}
+
+.orb-3 {
+  animation-delay: -10s;
+}
+
+/* Sound wave animation for music player */
+@keyframes sound-wave {
+
+  0%,
+  100% {
+    height: 4px;
+  }
+
+  50% {
+    height: 16px;
+  }
+}
+
+.sound-bar {
+  animation: sound-wave 0.6s ease-in-out infinite;
+}
+
+.sound-bar:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.sound-bar:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.sound-bar:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.sound-bar:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+/* Glow effects for cards */
+.card-glow-blue:hover {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
+}
+
+.card-glow-rose:hover {
+  box-shadow: 0 0 30px rgba(244, 63, 94, 0.15);
+}
+
+.card-glow-purple:hover {
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.15);
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .floating-heart {
+    animation-duration: 20s;
+    /* Slower on mobile for performance */
+  }
+
+  .orb {
+    animation-duration: 30s;
+    /* Slower on mobile */
+    opacity: 0.3;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+
+  .floating-heart,
+  .falling-flower,
+  .orb,
+  .pulse-gentle,
+  .shimmer,
+  .sound-bar {
+    animation: none;
+  }
+}

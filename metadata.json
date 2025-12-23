@@ -1,0 +1,7 @@
+{
+  "name": "Sincere Apology - A Path Forward",
+  "description": "A calm, emotionally mature, and minimalist single-page website designed to express genuine regret and accountability while respecting personal space.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
