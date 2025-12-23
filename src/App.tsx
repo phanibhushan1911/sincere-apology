@@ -447,7 +447,7 @@ const App: React.FC = () => {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.5 }}
-                  className="mt-6 text-[10px] md:text-xs text-gray-400/60 font-light tracking-wide max-w-xs mx-auto leading-relaxed"
+                  className="mt-6 text-[10px] md:text-xs text-black font-light tracking-wide max-w-xs mx-auto leading-relaxed"
                 >
                   ✨ This apology will remain here as long as the internet exists on this planet ✨
                 </motion.p>
